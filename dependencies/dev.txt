@@ -1,0 +1,15 @@
+#
+# Development helper applications, not required for running the
+# application.
+#
+
+ipython
+ipdb
+pdbpp
+
+# Schema graph generation
+sqlalchemy_schemadisplay
+
+# Documentation
+Sphinx==1.2.2
+phinx-better-theme==0.13

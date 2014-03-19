@@ -1,0 +1,6 @@
+#
+# Test dependencies
+# Used for when testing the application
+#
+
+nose==1.3.1

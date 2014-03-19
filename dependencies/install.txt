@@ -1,0 +1,14 @@
+#
+# Installation Requirements
+# Installed with python setup.py install|develop
+#
+
+# Application
+Flask==0.10.1
+Flask-Migrate==1.2.0
+Flask-Login==0.2.10
+Flask-Security==1.7.1
+
+# Databse
+SQLAlchemy==0.9.3
+psycopg2==2.5.2

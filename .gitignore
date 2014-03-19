@@ -1,0 +1,17 @@
+# Python
+*.pyc
+*.egg-info/
+dist/
+
+# Vagrant
+.vagrant/
+
+# Dots
+.DS_Store
+.env
+
+# Schema
+schema.png
+
+# Docs
+docs/build/
