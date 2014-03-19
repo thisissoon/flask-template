@@ -59,5 +59,11 @@ class UserRoles(db.Model):
 
     __tablename__ = 'auth_user_roles'
 
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), primary_key=True)
-    role_id = db.Column(db.Integer, db.ForeignKey('role.id'), primary_key=True)
+    user_id = db.Column(
+        db.Integer,
+        db.ForeignKey('auth_user.id'),
+        primary_key=True)
+    role_id = db.Column(
+        db.Integer,
+        db.ForeignKey('auth_role.id'),
+        primary_key=True)
