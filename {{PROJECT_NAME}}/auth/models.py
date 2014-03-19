@@ -8,17 +8,12 @@
 from flask.ext.security import RoleMixin, UserMixin
 from {{PROJECT_NAME}}.models import BaseModel
 from {{PROJECT_NAME}}.ext import db
-from sqlalchemy.dialectsextimport postgresql
-
-
-# Through table for matching users to roles
-roles_users = db.Table(
-    'roles_users',
-    db.Column('user_id', db.Integer(), db.ForeignKey('user.id')),
-    db.Column('role_id', db.Integer(), db.ForeignKey('role.id')))
+from sqlalchemy.dialectsext import postgresql
 
 
 class User(BaseModel, UserMixin):
+
+    __tablename__ = 'auth_user'
 
     # Primary Key
     id = db.Column(db.Integer, primary_key=True)
@@ -44,11 +39,13 @@ class User(BaseModel, UserMixin):
     # Relations
     roles = db.relationship(
         'Role',
-        secondary=roles_users,
+        secondary='auth_user_roles',
         backref=db.backref('users', lazy='dynamic'))
 
 
 class Role(BaseModel, RoleMixin):
+
+    __tablename__ = 'auth_role'
 
     # Primary key
     id = db.Column(db.Integer(), primary_key=True)
@@ -56,3 +53,11 @@ class Role(BaseModel, RoleMixin):
     # Details
     name = db.Column(db.String(80), unique=True)
     description = db.Column(db.String(255))
+
+
+class UserRoles(db.Model):
+
+    __tablename__ = 'auth_user_roles'
+
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), primary_key=True)
+    role_id = db.Column(db.Integer, db.ForeignKey('role.id'), primary_key=True)
