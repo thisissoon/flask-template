@@ -1,3 +1,19 @@
+Using this Template
+===================
+
+*DELETE THIS AFTER THE TEMPLATE HAS BEEN PROCESSED*
+
+This template is designed to be used with `Facio
+<https://facio.readthedocs.org>`_. To use this template follow these commands:
+
+.. code::
+
+    sudo pip install facio
+    facio foo --template git+git@github.com:thisissoon/flask-template.git
+    mkvirtualenv foo --no-site-packages
+    workon foo
+    cd foo
+
 {{PROJECT_NAME}}
 ================
 
