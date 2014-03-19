@@ -8,7 +8,7 @@
 from flask.ext.security import RoleMixin, UserMixin
 from {{PROJECT_NAME}}.models import BaseModel
 from {{PROJECT_NAME}}.ext import db
-from sqlalchemy.dialectsext import postgresql
+from sqlalchemy.dialects import postgresql
 
 
 class User(BaseModel, UserMixin):
