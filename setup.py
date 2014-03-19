@@ -63,12 +63,12 @@ def read(name):
 
 # Setup function
 setup(
-    name='{{PROJECT_NAME}}.',
+    name='{{PROJECT_NAME}}',
     version=read('VERSION.txt').strip(),
     author='SOON_',
     author_email='dorks@thisissoon.com',
     url='http://thisissoon.com',
-    description='A private PyPi server written in Flask',
+    description='#TODO: Project description',
     long_description=read('README.rst'),
     packages=find_packages(
         exclude=[
