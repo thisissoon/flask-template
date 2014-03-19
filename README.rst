@@ -92,8 +92,7 @@ You can also view the docs by running:
 
 This will open the docs in your systems default browser in a new tab / window.
 
-
 Credits
 -------
 
-Made by `SOON <http://thisissoon.com>_`_ with paint brushes.
+Made by `SOON_ <http://thisissoon.com>`_. with paint brushes.
